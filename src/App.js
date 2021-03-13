@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import Modal from "./components/Modal";
 
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 function App() {
   const [viewCompletedTasks, setViewCompletedTasks] = useState(false);
